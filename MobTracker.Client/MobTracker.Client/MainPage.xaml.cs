@@ -18,15 +18,22 @@ namespace MobTracker.Client
     {
         private HttpClient _httpClient;
         private HubConnection _connection;
+        private HttpClientHandler _httpClientHandler;
 
         public MainPage()
         {
             InitializeComponent();
 
-            _httpClient = new HttpClient();
+            _httpClientHandler = new HttpClientHandler();
+            _httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true;
+
+            _httpClient = new HttpClient(_httpClientHandler);
 
             _connection = new HubConnectionBuilder()
-                    .WithUrl("http://10.0.2.2:4000/api")
+                    .WithUrl("https://10.0.2.2:44375/api", options =>
+                    {
+                        options.HttpMessageHandlerFactory = (_) => _httpClientHandler;
+                    })
                     .Build();
 
             _connection.On("GetLocationFromTracker", async () =>
@@ -64,14 +71,14 @@ namespace MobTracker.Client
             }
         }
 
-        private async void OnTestHttpButtonClicked(object sender, EventArgs args)
+        private async void OnTestHttpsButtonClicked(object sender, EventArgs args)
         {
             try
             {
-                HttpResponseMessage response = await _httpClient.GetAsync("http://10.0.2.2:4000/test");
+                HttpResponseMessage response = await _httpClient.GetAsync("https://10.0.2.2:44375/test");
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
-                label.Text = responseBody.Substring(0, 50);
+                label.Text = responseBody;
             }
             catch (Exception ex)
             {

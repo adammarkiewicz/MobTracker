@@ -24,10 +24,10 @@
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="Center"
                 Clicked="OnSendButtonClicked" />
-        <Button Text="Test http"
+        <Button Text="Test https"
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="Center"
-                Clicked="OnTestHttpButtonClicked" />
+                Clicked="OnTestHttpsButtonClicked" />
     </StackLayout>
 
 </ContentPage>
