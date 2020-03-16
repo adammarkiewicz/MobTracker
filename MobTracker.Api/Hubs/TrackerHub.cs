@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
+using MobTracker.Api.Constants;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,9 +19,9 @@ namespace MobTracker.SignalrApi.Hubs
 
             await Groups.AddToGroupAsync(Context.ConnectionId, groupName);
 
-            if (applicationType == "mobile")
+            if (applicationType == ApplicationType.Mobile)
             {
-                var adminUIGroupName = string.Concat(userId, "admin-ui");
+                var adminUIGroupName = string.Concat(userId, ApplicationType.AdminUI);
                 await Clients.Group(adminUIGroupName).SendAsync("NewDeviceConnected");
             }
         }
@@ -28,7 +29,7 @@ namespace MobTracker.SignalrApi.Hubs
         public async Task TrigerIntroductionOfConnectedDevices()
         {
             var userId = Context.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-            var mobileGroupName = string.Concat(userId, "mobile");
+            var mobileGroupName = string.Concat(userId, ApplicationType.Mobile);
 
             await Clients.Group(mobileGroupName).SendAsync("IntroduceYourself");
         }
