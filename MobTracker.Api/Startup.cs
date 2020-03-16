@@ -41,17 +41,21 @@ namespace MobTracker.Api
                     {
                         var accessToken = context.Request.Query["access_token"];
 
-                        // If the request is for our hub...
                         var path = context.HttpContext.Request.Path;
-                        if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/api"))
+                        if (!string.IsNullOrEmpty(accessToken) && path.StartsWithSegments("/api/v1"))
                         {
-                            // Read the token out of the query string
                             context.Token = accessToken;
                         }
                         return Task.CompletedTask;
                     }
                 };
             });
+
+            /*services.AddAuthorization(options =>
+            {
+                options.AddPolicy("HasReadScope", policy => policy.RequireClaim("scope", "read"));
+            });*/
+
 
             services.AddSignalR();
         }
@@ -76,7 +80,7 @@ namespace MobTracker.Api
                     await context.Response.WriteAsync("Test succeded!");
                 }).RequireAuthorization();
 
-                endpoints.MapHub<TrackerHub>("/api");
+                endpoints.MapHub<TrackerHub>("/api/v1");
             });
         }
     }

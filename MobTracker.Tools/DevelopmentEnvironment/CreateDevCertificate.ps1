@@ -39,7 +39,8 @@ $Store.Close()
 $keyPath = "./localhost-key.pem"
 $certPath = "./localhost.pem"
 $password = "changeit"
-$outPath = "$PSScriptRoot/mobtracker-admin-ui/node_modules/webpack-dev-server/ssl/server.pem"
+#$outPath = "$PSScriptRoot/mobtracker-admin-ui/node_modules/webpack-dev-server/ssl/server.pem"
+$outPath = "C:\Users\Adam\source\repos\MobTracker\mobtracker-admin-ui\node_modules\webpack-dev-server\ssl/server.pem"
 
 openssl pkcs12 -in $mkcertdir\$name\localhost+3.p12 -nocerts -out $keyPath -nodes -passin pass:$password
 openssl pkcs12 -in $mkcertdir\$name\localhost+3.p12 -nokeys -out $certPath -nodes -passin pass:$password
