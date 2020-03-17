@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client;
+using MobTracker.Client.Services.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -27,7 +28,7 @@ namespace MobTracker.Client
             _httpClientHandler = new HttpClientHandler();
             _httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true;
 
-            _httpClient = new HttpClient(_httpClientHandler);
+            /*_httpClient = new HttpClient(_httpClientHandler);
 
             _connection = new HubConnectionBuilder()
                     .WithUrl("https://10.0.2.2:44375/api", options =>
@@ -36,6 +37,9 @@ namespace MobTracker.Client
                     })
                     .Build();
 
+            _connection.On("IntroduceYourself", async () =>
+                await _connection.InvokeAsync("DeviceIntroduction", "device1"));
+
             _connection.On("GetLocationFromTracker", async () =>
                 await _connection.InvokeAsync("ReceiveLocationFromTracker", "47.275175, 8.448372"));
 
@@ -43,7 +47,7 @@ namespace MobTracker.Client
             {
                 await Task.Delay(new Random().Next(0, 5) * 1000);
                 await _connection.StartAsync();
-            };
+            };*/
         }
 
         private async void OnConnectButtonClicked(object sender, EventArgs args)
@@ -75,7 +79,7 @@ namespace MobTracker.Client
         {
             try
             {
-                HttpResponseMessage response = await _httpClient.GetAsync("https://10.0.2.2:44375/test");
+                HttpResponseMessage response = await _httpClient.GetAsync("https://10.0.2.2:44375/api/test");
                 response.EnsureSuccessStatusCode();
                 string responseBody = await response.Content.ReadAsStringAsync();
                 label.Text = responseBody;
@@ -84,6 +88,14 @@ namespace MobTracker.Client
             {
                 Debugger.Log(1, "all", ex.Message);
             }
+        }
+
+        private async void OnLoginButtonClicked(object sender, EventArgs args)
+        {
+            var authenticationService = DependencyService.Get<IAuthenticationService>();
+            var authenticationResult = await authenticationService.Authenticate();
+
+            label.Text = authenticationResult.IdToken.Substring(0, 30);
         }
     }
 }

@@ -26,6 +26,105 @@ namespace MobTracker.Client.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Auth0.OidcClient.Resource.Attribute.font = global::MobTracker.Client.Droid.Resource.Attribute.font;
+			global::Auth0.OidcClient.Resource.Attribute.fontProviderAuthority = global::MobTracker.Client.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Auth0.OidcClient.Resource.Attribute.fontProviderCerts = global::MobTracker.Client.Droid.Resource.Attribute.fontProviderCerts;
+			global::Auth0.OidcClient.Resource.Attribute.fontProviderFetchStrategy = global::MobTracker.Client.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Auth0.OidcClient.Resource.Attribute.fontProviderFetchTimeout = global::MobTracker.Client.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Auth0.OidcClient.Resource.Attribute.fontProviderPackage = global::MobTracker.Client.Droid.Resource.Attribute.fontProviderPackage;
+			global::Auth0.OidcClient.Resource.Attribute.fontProviderQuery = global::MobTracker.Client.Droid.Resource.Attribute.fontProviderQuery;
+			global::Auth0.OidcClient.Resource.Attribute.fontStyle = global::MobTracker.Client.Droid.Resource.Attribute.fontStyle;
+			global::Auth0.OidcClient.Resource.Attribute.fontWeight = global::MobTracker.Client.Droid.Resource.Attribute.fontWeight;
+			global::Auth0.OidcClient.Resource.Boolean.abc_action_bar_embed_tabs = global::MobTracker.Client.Droid.Resource.Boolean.abc_action_bar_embed_tabs;
+			global::Auth0.OidcClient.Resource.Color.notification_action_color_filter = global::MobTracker.Client.Droid.Resource.Color.notification_action_color_filter;
+			global::Auth0.OidcClient.Resource.Color.notification_icon_bg_color = global::MobTracker.Client.Droid.Resource.Color.notification_icon_bg_color;
+			global::Auth0.OidcClient.Resource.Color.ripple_material_light = global::MobTracker.Client.Droid.Resource.Color.ripple_material_light;
+			global::Auth0.OidcClient.Resource.Color.secondary_text_default_material_light = global::MobTracker.Client.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Auth0.OidcClient.Resource.Dimension.compat_button_inset_horizontal_material = global::MobTracker.Client.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Auth0.OidcClient.Resource.Dimension.compat_button_inset_vertical_material = global::MobTracker.Client.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Auth0.OidcClient.Resource.Dimension.compat_button_padding_horizontal_material = global::MobTracker.Client.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Auth0.OidcClient.Resource.Dimension.compat_button_padding_vertical_material = global::MobTracker.Client.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Auth0.OidcClient.Resource.Dimension.compat_control_corner_material = global::MobTracker.Client.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Auth0.OidcClient.Resource.Dimension.notification_action_icon_size = global::MobTracker.Client.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Auth0.OidcClient.Resource.Dimension.notification_action_text_size = global::MobTracker.Client.Droid.Resource.Dimension.notification_action_text_size;
+			global::Auth0.OidcClient.Resource.Dimension.notification_big_circle_margin = global::MobTracker.Client.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Auth0.OidcClient.Resource.Dimension.notification_content_margin_start = global::MobTracker.Client.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Auth0.OidcClient.Resource.Dimension.notification_large_icon_height = global::MobTracker.Client.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Auth0.OidcClient.Resource.Dimension.notification_large_icon_width = global::MobTracker.Client.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Auth0.OidcClient.Resource.Dimension.notification_main_column_padding_top = global::MobTracker.Client.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Auth0.OidcClient.Resource.Dimension.notification_media_narrow_margin = global::MobTracker.Client.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Auth0.OidcClient.Resource.Dimension.notification_right_icon_size = global::MobTracker.Client.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Auth0.OidcClient.Resource.Dimension.notification_right_side_padding_top = global::MobTracker.Client.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Auth0.OidcClient.Resource.Dimension.notification_small_icon_background_padding = global::MobTracker.Client.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Auth0.OidcClient.Resource.Dimension.notification_small_icon_size_as_large = global::MobTracker.Client.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Auth0.OidcClient.Resource.Dimension.notification_subtext_size = global::MobTracker.Client.Droid.Resource.Dimension.notification_subtext_size;
+			global::Auth0.OidcClient.Resource.Dimension.notification_top_pad = global::MobTracker.Client.Droid.Resource.Dimension.notification_top_pad;
+			global::Auth0.OidcClient.Resource.Dimension.notification_top_pad_large_text = global::MobTracker.Client.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Auth0.OidcClient.Resource.Drawable.notification_action_background = global::MobTracker.Client.Droid.Resource.Drawable.notification_action_background;
+			global::Auth0.OidcClient.Resource.Drawable.notification_bg = global::MobTracker.Client.Droid.Resource.Drawable.notification_bg;
+			global::Auth0.OidcClient.Resource.Drawable.notification_bg_low = global::MobTracker.Client.Droid.Resource.Drawable.notification_bg_low;
+			global::Auth0.OidcClient.Resource.Drawable.notification_bg_low_normal = global::MobTracker.Client.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Auth0.OidcClient.Resource.Drawable.notification_bg_low_pressed = global::MobTracker.Client.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Auth0.OidcClient.Resource.Drawable.notification_bg_normal = global::MobTracker.Client.Droid.Resource.Drawable.notification_bg_normal;
+			global::Auth0.OidcClient.Resource.Drawable.notification_bg_normal_pressed = global::MobTracker.Client.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Auth0.OidcClient.Resource.Drawable.notification_icon_background = global::MobTracker.Client.Droid.Resource.Drawable.notification_icon_background;
+			global::Auth0.OidcClient.Resource.Drawable.notification_template_icon_bg = global::MobTracker.Client.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Auth0.OidcClient.Resource.Drawable.notification_template_icon_low_bg = global::MobTracker.Client.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Auth0.OidcClient.Resource.Drawable.notification_tile_bg = global::MobTracker.Client.Droid.Resource.Drawable.notification_tile_bg;
+			global::Auth0.OidcClient.Resource.Drawable.notify_panel_notification_icon_bg = global::MobTracker.Client.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Auth0.OidcClient.Resource.Id.actions = global::MobTracker.Client.Droid.Resource.Id.actions;
+			global::Auth0.OidcClient.Resource.Id.action_container = global::MobTracker.Client.Droid.Resource.Id.action_container;
+			global::Auth0.OidcClient.Resource.Id.action_divider = global::MobTracker.Client.Droid.Resource.Id.action_divider;
+			global::Auth0.OidcClient.Resource.Id.action_image = global::MobTracker.Client.Droid.Resource.Id.action_image;
+			global::Auth0.OidcClient.Resource.Id.action_text = global::MobTracker.Client.Droid.Resource.Id.action_text;
+			global::Auth0.OidcClient.Resource.Id.async = global::MobTracker.Client.Droid.Resource.Id.async;
+			global::Auth0.OidcClient.Resource.Id.blocking = global::MobTracker.Client.Droid.Resource.Id.blocking;
+			global::Auth0.OidcClient.Resource.Id.chronometer = global::MobTracker.Client.Droid.Resource.Id.chronometer;
+			global::Auth0.OidcClient.Resource.Id.forever = global::MobTracker.Client.Droid.Resource.Id.forever;
+			global::Auth0.OidcClient.Resource.Id.icon = global::MobTracker.Client.Droid.Resource.Id.icon;
+			global::Auth0.OidcClient.Resource.Id.icon_group = global::MobTracker.Client.Droid.Resource.Id.icon_group;
+			global::Auth0.OidcClient.Resource.Id.info = global::MobTracker.Client.Droid.Resource.Id.info;
+			global::Auth0.OidcClient.Resource.Id.italic = global::MobTracker.Client.Droid.Resource.Id.italic;
+			global::Auth0.OidcClient.Resource.Id.line1 = global::MobTracker.Client.Droid.Resource.Id.line1;
+			global::Auth0.OidcClient.Resource.Id.line3 = global::MobTracker.Client.Droid.Resource.Id.line3;
+			global::Auth0.OidcClient.Resource.Id.normal = global::MobTracker.Client.Droid.Resource.Id.normal;
+			global::Auth0.OidcClient.Resource.Id.notification_background = global::MobTracker.Client.Droid.Resource.Id.notification_background;
+			global::Auth0.OidcClient.Resource.Id.notification_main_column = global::MobTracker.Client.Droid.Resource.Id.notification_main_column;
+			global::Auth0.OidcClient.Resource.Id.notification_main_column_container = global::MobTracker.Client.Droid.Resource.Id.notification_main_column_container;
+			global::Auth0.OidcClient.Resource.Id.right_icon = global::MobTracker.Client.Droid.Resource.Id.right_icon;
+			global::Auth0.OidcClient.Resource.Id.right_side = global::MobTracker.Client.Droid.Resource.Id.right_side;
+			global::Auth0.OidcClient.Resource.Id.text = global::MobTracker.Client.Droid.Resource.Id.text;
+			global::Auth0.OidcClient.Resource.Id.text2 = global::MobTracker.Client.Droid.Resource.Id.text2;
+			global::Auth0.OidcClient.Resource.Id.time = global::MobTracker.Client.Droid.Resource.Id.time;
+			global::Auth0.OidcClient.Resource.Id.title = global::MobTracker.Client.Droid.Resource.Id.title;
+			global::Auth0.OidcClient.Resource.Integer.status_bar_notification_info_maxnum = global::MobTracker.Client.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Auth0.OidcClient.Resource.Layout.notification_action = global::MobTracker.Client.Droid.Resource.Layout.notification_action;
+			global::Auth0.OidcClient.Resource.Layout.notification_action_tombstone = global::MobTracker.Client.Droid.Resource.Layout.notification_action_tombstone;
+			global::Auth0.OidcClient.Resource.Layout.notification_template_custom_big = global::MobTracker.Client.Droid.Resource.Layout.notification_template_custom_big;
+			global::Auth0.OidcClient.Resource.Layout.notification_template_icon_group = global::MobTracker.Client.Droid.Resource.Layout.notification_template_icon_group;
+			global::Auth0.OidcClient.Resource.Layout.notification_template_part_chronometer = global::MobTracker.Client.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Auth0.OidcClient.Resource.Layout.notification_template_part_time = global::MobTracker.Client.Droid.Resource.Layout.notification_template_part_time;
+			global::Auth0.OidcClient.Resource.String.ApplicationName = global::MobTracker.Client.Droid.Resource.String.ApplicationName;
+			global::Auth0.OidcClient.Resource.String.Hello = global::MobTracker.Client.Droid.Resource.String.Hello;
+			global::Auth0.OidcClient.Resource.String.status_bar_notification_info_overflow = global::MobTracker.Client.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Auth0.OidcClient.Resource.Style.TextAppearance_Compat_Notification = global::MobTracker.Client.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Auth0.OidcClient.Resource.Style.TextAppearance_Compat_Notification_Info = global::MobTracker.Client.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Auth0.OidcClient.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::MobTracker.Client.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Auth0.OidcClient.Resource.Style.TextAppearance_Compat_Notification_Time = global::MobTracker.Client.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Auth0.OidcClient.Resource.Style.TextAppearance_Compat_Notification_Title = global::MobTracker.Client.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Auth0.OidcClient.Resource.Style.Widget_Compat_NotificationActionContainer = global::MobTracker.Client.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Auth0.OidcClient.Resource.Style.Widget_Compat_NotificationActionText = global::MobTracker.Client.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamily = global::MobTracker.Client.Droid.Resource.Styleable.FontFamily;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamilyFont = global::MobTracker.Client.Droid.Resource.Styleable.FontFamilyFont;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamilyFont_font = global::MobTracker.Client.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamilyFont_fontStyle = global::MobTracker.Client.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamilyFont_fontWeight = global::MobTracker.Client.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamily_fontProviderAuthority = global::MobTracker.Client.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamily_fontProviderCerts = global::MobTracker.Client.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::MobTracker.Client.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::MobTracker.Client.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamily_fontProviderPackage = global::MobTracker.Client.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Auth0.OidcClient.Resource.Styleable.FontFamily_fontProviderQuery = global::MobTracker.Client.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::MobTracker.Client.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::MobTracker.Client.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::MobTracker.Client.Droid.Resource.Attribute.font;
@@ -6771,167 +6870,173 @@ namespace MobTracker.Client.Droid
 		public partial class String
 		{
 			
-			// aapt resource value: 0x7F0D0000
-			public const int abc_action_bar_home_description = 2131558400;
-			
-			// aapt resource value: 0x7F0D0001
-			public const int abc_action_bar_up_description = 2131558401;
-			
 			// aapt resource value: 0x7F0D0002
-			public const int abc_action_menu_overflow_description = 2131558402;
+			public const int abc_action_bar_home_description = 2131558402;
 			
 			// aapt resource value: 0x7F0D0003
-			public const int abc_action_mode_done = 2131558403;
-			
-			// aapt resource value: 0x7F0D0005
-			public const int abc_activitychooserview_choose_application = 2131558405;
+			public const int abc_action_bar_up_description = 2131558403;
 			
 			// aapt resource value: 0x7F0D0004
-			public const int abc_activity_chooser_view_see_all = 2131558404;
+			public const int abc_action_menu_overflow_description = 2131558404;
 			
-			// aapt resource value: 0x7F0D0006
-			public const int abc_capital_off = 2131558406;
+			// aapt resource value: 0x7F0D0005
+			public const int abc_action_mode_done = 2131558405;
 			
 			// aapt resource value: 0x7F0D0007
-			public const int abc_capital_on = 2131558407;
+			public const int abc_activitychooserview_choose_application = 2131558407;
+			
+			// aapt resource value: 0x7F0D0006
+			public const int abc_activity_chooser_view_see_all = 2131558406;
 			
 			// aapt resource value: 0x7F0D0008
-			public const int abc_font_family_body_1_material = 2131558408;
+			public const int abc_capital_off = 2131558408;
 			
 			// aapt resource value: 0x7F0D0009
-			public const int abc_font_family_body_2_material = 2131558409;
+			public const int abc_capital_on = 2131558409;
 			
 			// aapt resource value: 0x7F0D000A
-			public const int abc_font_family_button_material = 2131558410;
+			public const int abc_font_family_body_1_material = 2131558410;
 			
 			// aapt resource value: 0x7F0D000B
-			public const int abc_font_family_caption_material = 2131558411;
+			public const int abc_font_family_body_2_material = 2131558411;
 			
 			// aapt resource value: 0x7F0D000C
-			public const int abc_font_family_display_1_material = 2131558412;
+			public const int abc_font_family_button_material = 2131558412;
 			
 			// aapt resource value: 0x7F0D000D
-			public const int abc_font_family_display_2_material = 2131558413;
+			public const int abc_font_family_caption_material = 2131558413;
 			
 			// aapt resource value: 0x7F0D000E
-			public const int abc_font_family_display_3_material = 2131558414;
+			public const int abc_font_family_display_1_material = 2131558414;
 			
 			// aapt resource value: 0x7F0D000F
-			public const int abc_font_family_display_4_material = 2131558415;
+			public const int abc_font_family_display_2_material = 2131558415;
 			
 			// aapt resource value: 0x7F0D0010
-			public const int abc_font_family_headline_material = 2131558416;
+			public const int abc_font_family_display_3_material = 2131558416;
 			
 			// aapt resource value: 0x7F0D0011
-			public const int abc_font_family_menu_material = 2131558417;
+			public const int abc_font_family_display_4_material = 2131558417;
 			
 			// aapt resource value: 0x7F0D0012
-			public const int abc_font_family_subhead_material = 2131558418;
+			public const int abc_font_family_headline_material = 2131558418;
 			
 			// aapt resource value: 0x7F0D0013
-			public const int abc_font_family_title_material = 2131558419;
+			public const int abc_font_family_menu_material = 2131558419;
 			
 			// aapt resource value: 0x7F0D0014
-			public const int abc_menu_alt_shortcut_label = 2131558420;
+			public const int abc_font_family_subhead_material = 2131558420;
 			
 			// aapt resource value: 0x7F0D0015
-			public const int abc_menu_ctrl_shortcut_label = 2131558421;
+			public const int abc_font_family_title_material = 2131558421;
 			
 			// aapt resource value: 0x7F0D0016
-			public const int abc_menu_delete_shortcut_label = 2131558422;
+			public const int abc_menu_alt_shortcut_label = 2131558422;
 			
 			// aapt resource value: 0x7F0D0017
-			public const int abc_menu_enter_shortcut_label = 2131558423;
+			public const int abc_menu_ctrl_shortcut_label = 2131558423;
 			
 			// aapt resource value: 0x7F0D0018
-			public const int abc_menu_function_shortcut_label = 2131558424;
+			public const int abc_menu_delete_shortcut_label = 2131558424;
 			
 			// aapt resource value: 0x7F0D0019
-			public const int abc_menu_meta_shortcut_label = 2131558425;
+			public const int abc_menu_enter_shortcut_label = 2131558425;
 			
 			// aapt resource value: 0x7F0D001A
-			public const int abc_menu_shift_shortcut_label = 2131558426;
+			public const int abc_menu_function_shortcut_label = 2131558426;
 			
 			// aapt resource value: 0x7F0D001B
-			public const int abc_menu_space_shortcut_label = 2131558427;
+			public const int abc_menu_meta_shortcut_label = 2131558427;
 			
 			// aapt resource value: 0x7F0D001C
-			public const int abc_menu_sym_shortcut_label = 2131558428;
+			public const int abc_menu_shift_shortcut_label = 2131558428;
 			
 			// aapt resource value: 0x7F0D001D
-			public const int abc_prepend_shortcut_label = 2131558429;
-			
-			// aapt resource value: 0x7F0D001F
-			public const int abc_searchview_description_clear = 2131558431;
-			
-			// aapt resource value: 0x7F0D0020
-			public const int abc_searchview_description_query = 2131558432;
-			
-			// aapt resource value: 0x7F0D0021
-			public const int abc_searchview_description_search = 2131558433;
-			
-			// aapt resource value: 0x7F0D0022
-			public const int abc_searchview_description_submit = 2131558434;
-			
-			// aapt resource value: 0x7F0D0023
-			public const int abc_searchview_description_voice = 2131558435;
+			public const int abc_menu_space_shortcut_label = 2131558429;
 			
 			// aapt resource value: 0x7F0D001E
-			public const int abc_search_hint = 2131558430;
+			public const int abc_menu_sym_shortcut_label = 2131558430;
+			
+			// aapt resource value: 0x7F0D001F
+			public const int abc_prepend_shortcut_label = 2131558431;
+			
+			// aapt resource value: 0x7F0D0021
+			public const int abc_searchview_description_clear = 2131558433;
+			
+			// aapt resource value: 0x7F0D0022
+			public const int abc_searchview_description_query = 2131558434;
+			
+			// aapt resource value: 0x7F0D0023
+			public const int abc_searchview_description_search = 2131558435;
 			
 			// aapt resource value: 0x7F0D0024
-			public const int abc_shareactionprovider_share_with = 2131558436;
+			public const int abc_searchview_description_submit = 2131558436;
 			
 			// aapt resource value: 0x7F0D0025
-			public const int abc_shareactionprovider_share_with_application = 2131558437;
+			public const int abc_searchview_description_voice = 2131558437;
+			
+			// aapt resource value: 0x7F0D0020
+			public const int abc_search_hint = 2131558432;
 			
 			// aapt resource value: 0x7F0D0026
-			public const int abc_toolbar_collapse_description = 2131558438;
+			public const int abc_shareactionprovider_share_with = 2131558438;
 			
 			// aapt resource value: 0x7F0D0027
-			public const int appbar_scrolling_view_behavior = 2131558439;
+			public const int abc_shareactionprovider_share_with_application = 2131558439;
 			
 			// aapt resource value: 0x7F0D0028
-			public const int bottom_sheet_behavior = 2131558440;
+			public const int abc_toolbar_collapse_description = 2131558440;
 			
 			// aapt resource value: 0x7F0D0029
-			public const int character_counter_content_description = 2131558441;
+			public const int appbar_scrolling_view_behavior = 2131558441;
+			
+			// aapt resource value: 0x7F0D0000
+			public const int ApplicationName = 2131558400;
 			
 			// aapt resource value: 0x7F0D002A
-			public const int character_counter_pattern = 2131558442;
+			public const int bottom_sheet_behavior = 2131558442;
 			
 			// aapt resource value: 0x7F0D002B
-			public const int fab_transformation_scrim_behavior = 2131558443;
+			public const int character_counter_content_description = 2131558443;
 			
 			// aapt resource value: 0x7F0D002C
-			public const int fab_transformation_sheet_behavior = 2131558444;
+			public const int character_counter_pattern = 2131558444;
 			
 			// aapt resource value: 0x7F0D002D
-			public const int hide_bottom_view_on_scroll_behavior = 2131558445;
+			public const int fab_transformation_scrim_behavior = 2131558445;
 			
 			// aapt resource value: 0x7F0D002E
-			public const int mtrl_chip_close_icon_content_description = 2131558446;
+			public const int fab_transformation_sheet_behavior = 2131558446;
+			
+			// aapt resource value: 0x7F0D0001
+			public const int Hello = 2131558401;
 			
 			// aapt resource value: 0x7F0D002F
-			public const int password_toggle_content_description = 2131558447;
+			public const int hide_bottom_view_on_scroll_behavior = 2131558447;
 			
 			// aapt resource value: 0x7F0D0030
-			public const int path_password_eye = 2131558448;
+			public const int mtrl_chip_close_icon_content_description = 2131558448;
 			
 			// aapt resource value: 0x7F0D0031
-			public const int path_password_eye_mask_strike_through = 2131558449;
+			public const int password_toggle_content_description = 2131558449;
 			
 			// aapt resource value: 0x7F0D0032
-			public const int path_password_eye_mask_visible = 2131558450;
+			public const int path_password_eye = 2131558450;
 			
 			// aapt resource value: 0x7F0D0033
-			public const int path_password_strike_through = 2131558451;
+			public const int path_password_eye_mask_strike_through = 2131558451;
 			
 			// aapt resource value: 0x7F0D0034
-			public const int search_menu_title = 2131558452;
+			public const int path_password_eye_mask_visible = 2131558452;
 			
 			// aapt resource value: 0x7F0D0035
-			public const int status_bar_notification_info_overflow = 2131558453;
+			public const int path_password_strike_through = 2131558453;
+			
+			// aapt resource value: 0x7F0D0036
+			public const int search_menu_title = 2131558454;
+			
+			// aapt resource value: 0x7F0D0037
+			public const int status_bar_notification_info_overflow = 2131558455;
 			
 			static String()
 			{
