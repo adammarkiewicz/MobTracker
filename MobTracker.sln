@@ -11,11 +11,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobTracker.Client.iOS", "Mo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobTracker.Client", "MobTracker.Client\MobTracker.Client\MobTracker.Client.csproj", "{7526E49C-DC27-44AD-A8CD-36D3996E365F}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobTracker.IdentityProvider", "MobTracker.IdentityProvider\MobTracker.IdentityProvider.csproj", "{8AD08878-A063-4369-8875-9D49EC5067BE}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobTracker.Api", "MobTracker.Api\MobTracker.Api.csproj", "{E435F049-A398-4E2F-A191-AA8F33CB518A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MobTracker.Tools", "MobTracker.Tools\MobTracker.Tools.csproj", "{85D5A579-0B34-4E7E-AD30-AA9FD67B438E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MobTracker.Tools", "MobTracker.Tools\MobTracker.Tools.csproj", "{85D5A579-0B34-4E7E-AD30-AA9FD67B438E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -133,30 +131,6 @@ Global
 		{7526E49C-DC27-44AD-A8CD-36D3996E365F}.Release|x64.Build.0 = Release|Any CPU
 		{7526E49C-DC27-44AD-A8CD-36D3996E365F}.Release|x86.ActiveCfg = Release|Any CPU
 		{7526E49C-DC27-44AD-A8CD-36D3996E365F}.Release|x86.Build.0 = Release|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Debug|ARM.Build.0 = Debug|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Debug|x64.Build.0 = Debug|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Debug|x86.Build.0 = Debug|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Release|Any CPU.Build.0 = Release|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Release|ARM.ActiveCfg = Release|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Release|ARM.Build.0 = Release|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Release|iPhone.Build.0 = Release|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Release|x64.ActiveCfg = Release|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Release|x64.Build.0 = Release|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Release|x86.ActiveCfg = Release|Any CPU
-		{8AD08878-A063-4369-8875-9D49EC5067BE}.Release|x86.Build.0 = Release|Any CPU
 		{E435F049-A398-4E2F-A191-AA8F33CB518A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{E435F049-A398-4E2F-A191-AA8F33CB518A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E435F049-A398-4E2F-A191-AA8F33CB518A}.Debug|ARM.ActiveCfg = Debug|Any CPU
