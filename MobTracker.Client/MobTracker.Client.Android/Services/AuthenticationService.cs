@@ -11,16 +11,13 @@ namespace MobTracker.Client.Droid.Services
 {
     public class AuthenticationService : IAuthenticationService
     {
-        private Auth0Client _auth0Client;
-
-        public AuthenticationService()
+        private readonly Auth0Client _auth0Client = new Auth0Client(new Auth0ClientOptions
         {
-            _auth0Client = new Auth0Client(new Auth0ClientOptions
-            {
-                Domain = AuthenticationConfig.Domain,
-                ClientId = AuthenticationConfig.ClientId
-            });
-        }
+            Domain = AuthenticationConfig.Domain,
+            ClientId = AuthenticationConfig.ClientId
+        });
+
+        public bool IsAuthenticated { get; private set; } = false;
 
         public AuthenticationResult AuthenticationResult { get; private set; }
 
@@ -31,6 +28,8 @@ namespace MobTracker.Client.Droid.Services
 
             if (!auth0LoginResult.IsError)
             {
+                IsAuthenticated = true;
+
                 authenticationResult = new AuthenticationResult()
                 {
                     AccessToken = auth0LoginResult.AccessToken,
@@ -39,7 +38,9 @@ namespace MobTracker.Client.Droid.Services
                 };
             }
             else
+            {
                 authenticationResult = new AuthenticationResult(auth0LoginResult.IsError, auth0LoginResult.Error);
+            }
 
             AuthenticationResult = authenticationResult;
             return authenticationResult;

@@ -16,6 +16,9 @@ export default function DeviceBadge({ device }) {
           <div className="flex-column">
             {device.id}
             <p>
+              <small>{device.connectionId}</small>
+            </p>
+            <p>
               <small>{device.brand}</small>
             </p>
             <span className="badge badge-info badge-pill">{device.model}</span>

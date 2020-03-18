@@ -22,8 +22,6 @@ export function ApiProvider(props) {
   };
 
   const initializeApi = async () => {
-    setIsLoading(true);
-
     const token = await getTokenSilently();
     const conn = new signalR.HubConnectionBuilder()
       .withUrl(config.url, { accessTokenFactory: () => token })
@@ -46,8 +44,9 @@ export function ApiProvider(props) {
 
   const api = {
     isLoading,
-    trigerIntroductionOfConnectedDevices: () =>
-      connection.invoke("TrigerIntroductionOfConnectedDevices")
+    connection,
+    trigerDevicesIntroduction: () =>
+      connection.invoke("TrigerDevicesIntroduction")
   };
   const { children } = props;
   return <ApiContext.Provider value={api}>{children}</ApiContext.Provider>;

@@ -8,7 +8,9 @@ namespace MobTracker.Client.Services.Interfaces
 {
     public interface IAuthenticationService
     {
+
         Task<AuthenticationResult> Authenticate();
+        bool IsAuthenticated { get; }
         AuthenticationResult AuthenticationResult { get; }
     }
 }

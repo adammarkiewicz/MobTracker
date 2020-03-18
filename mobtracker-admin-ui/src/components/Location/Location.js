@@ -1,22 +1,37 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import DeviceList from "components/DeviceList/DeviceList";
 import { Row, Col } from "react-bootstrap";
 import { useApi } from "contexts/Api";
 
 export default function Location() {
-  const { isLoading, trigerIntroductionOfConnectedDevices } = useApi();
-  if (!isLoading) {
-    trigerIntroductionOfConnectedDevices();
-  }
+  const { isLoading, connection, trigerDevicesIntroduction } = useApi();
 
-  const list = [
-    { id: 1, brand: "Samsung", model: "Galaxy S" },
-    { id: 2, brand: "IPhone", model: "X" }
-  ];
+  const [deviceList, setDeviceList] = useState([
+    { id: 1, connectionId: 1, brand: "Samsung", model: "Galaxy S" },
+    { id: 2, connectionId: 2, brand: "IPhone", model: "X" }
+  ]);
+
+  useEffect(() => {
+    if (!isLoading) {
+      connection.on("NewDevice", device => {
+        setDeviceList(devices => [...devices, device]);
+      });
+
+      connection.on("DeviceDisconnected", connectionId => {
+        setDeviceList(devices =>
+          devices.filter(device => device.connectionId !== connectionId)
+        );
+      });
+
+      trigerDevicesIntroduction();
+    }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [isLoading]);
+
   return (
     <Row noGutters>
       <Col xs={3}>
-        <DeviceList list={list} />
+        <DeviceList list={deviceList} />
       </Col>
       <Col xs={9}>Map</Col>
     </Row>

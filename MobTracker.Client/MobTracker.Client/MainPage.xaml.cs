@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.SignalR.Client;
+using MobTracker.Client.Services;
 using MobTracker.Client.Services.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -17,19 +18,25 @@ namespace MobTracker.Client
     [DesignTimeVisible(false)]
     public partial class MainPage : ContentPage
     {
-        private HttpClient _httpClient;
-        private HubConnection _connection;
         private HttpClientHandler _httpClientHandler;
+        private HttpClient _httpClient;
+        private ApiService _apiService;
+        
 
         public MainPage()
         {
             InitializeComponent();
 
-            _httpClientHandler = new HttpClientHandler();
-            _httpClientHandler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true;
+            _httpClientHandler = new HttpClientHandler
+            {
+                ServerCertificateCustomValidationCallback = (message, cert, chain, errors) => true
+            };
 
-            /*_httpClient = new HttpClient(_httpClientHandler);
+            _httpClient = new HttpClient(_httpClientHandler);
 
+            _apiService = DependencyService.Get<ApiService>(DependencyFetchTarget.GlobalInstance);
+
+            /*
             _connection = new HubConnectionBuilder()
                     .WithUrl("https://10.0.2.2:44375/api", options =>
                     {
@@ -55,11 +62,15 @@ namespace MobTracker.Client
             try
             {
                 connectButton.IsEnabled = false;
-                await _connection.StartAsync();
+                await _apiService.Connect();
             }
             catch (Exception ex)
             {
                 Debugger.Log(1, "all", "Debugger.Log: " + ex.Message);
+            }
+            finally
+            {
+                connectButton.IsEnabled = true;
             }
         }
 
@@ -67,7 +78,7 @@ namespace MobTracker.Client
         {
             try
             {
-                await _connection.InvokeAsync("ReceiveLocationFromTracker", "47.275175, 8.448372");
+                //await _connection.InvokeAsync("ReceiveLocationFromTracker", "47.275175, 8.448372");
             }
             catch (Exception ex)
             {
@@ -92,10 +103,23 @@ namespace MobTracker.Client
 
         private async void OnLoginButtonClicked(object sender, EventArgs args)
         {
-            var authenticationService = DependencyService.Get<IAuthenticationService>();
-            var authenticationResult = await authenticationService.Authenticate();
+            try
+            {
+                LoginButton.IsEnabled = false;
 
-            label.Text = authenticationResult.IdToken.Substring(0, 30);
+                var authenticationService = DependencyService.Get<IAuthenticationService>(DependencyFetchTarget.GlobalInstance);
+                var authenticationResult = await authenticationService.Authenticate();
+
+                label.Text = authenticationResult.IdToken.Substring(0, 30);
+            }
+            catch (Exception ex)
+            {
+                Debugger.Log(1, "all", ex.Message);
+            }
+            finally
+            {
+                LoginButton.IsEnabled = true;
+            }
         }
     }
 }
