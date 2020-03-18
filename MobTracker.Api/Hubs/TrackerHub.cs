@@ -24,7 +24,7 @@ namespace MobTracker.SignalrApi.Hubs
         public async Task TrigerDevicesIntroduction()
         {
             var userId = Context.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-            var mobileGroupName = string.Concat(userId, ApplicationType.Mobile);
+            var mobileGroupName = string.Concat(userId, ApplicationTypes.Mobile);
 
             await Clients.Group(mobileGroupName).SendAsync("IntroduceYourself");
         }
@@ -32,7 +32,7 @@ namespace MobTracker.SignalrApi.Hubs
         public async Task DeviceIntroduction(Device device)
         {
             var userId = Context.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-            var adminUIGroupName = string.Concat(userId, ApplicationType.AdminUI);
+            var adminUIGroupName = string.Concat(userId, ApplicationTypes.AdminUI);
 
             device.ConnectionId = Context.ConnectionId;
 
@@ -42,7 +42,7 @@ namespace MobTracker.SignalrApi.Hubs
         public override async Task OnDisconnectedAsync(Exception exception)
         {
             var userId = Context.User.FindFirst(ClaimTypes.NameIdentifier).Value;
-            var adminUIGroupName = string.Concat(userId, ApplicationType.AdminUI);
+            var adminUIGroupName = string.Concat(userId, ApplicationTypes.AdminUI);
 
             await Clients.Group(adminUIGroupName).SendAsync("DeviceDisconnected", Context.ConnectionId);
 

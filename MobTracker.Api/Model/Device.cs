@@ -9,7 +9,7 @@ namespace MobTracker.Api.Model
     {
         public string Id { get; set; }
         public string ConnectionId { get; set; }
-        public string Brand { get; set; }
+        public string Manufacturer { get; set; }
         public string Model { get; set; }
     }
 }

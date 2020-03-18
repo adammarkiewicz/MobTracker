@@ -5,10 +5,10 @@ using System.Threading.Tasks;
 
 namespace MobTracker.Client.Model
 {
-    public class DeviceInfo
+    public class DeviceBadge
     {
         public string Id { get; set; }
-        public string Brand { get; set; }
+        public string Manufacturer { get; set; }
         public string Model { get; set; }
     }
 }

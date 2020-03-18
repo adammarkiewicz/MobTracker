@@ -26,7 +26,7 @@ namespace MobTracker.Client.Droid.Services
             var auth0LoginResult = await _auth0Client.LoginAsync(new { audience = AuthenticationConfig.Audience });
             AuthenticationResult authenticationResult;
 
-            if (!auth0LoginResult.IsError)
+            if (auth0LoginResult.IsError == false)
             {
                 IsAuthenticated = true;
 

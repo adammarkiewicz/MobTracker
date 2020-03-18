@@ -7,8 +7,8 @@ export default function Location() {
   const { isLoading, connection, trigerDevicesIntroduction } = useApi();
 
   const [deviceList, setDeviceList] = useState([
-    { id: 1, connectionId: 1, brand: "Samsung", model: "Galaxy S" },
-    { id: 2, connectionId: 2, brand: "IPhone", model: "X" }
+    { id: 1, connectionId: 1, manufacturer: "Samsung", model: "Galaxy S" },
+    { id: 2, connectionId: 2, manufacturer: "IPhone", model: "X" }
   ]);
 
   useEffect(() => {

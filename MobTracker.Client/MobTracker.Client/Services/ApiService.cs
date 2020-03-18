@@ -23,7 +23,10 @@ namespace MobTracker.Client.Services
 
         private IAuthenticationService _authenticationService =
             DependencyService.Get<IAuthenticationService>(DependencyFetchTarget.GlobalInstance);
+        private IDeviceInfoService _deviceInfoService =
+            DependencyService.Get<IDeviceInfoService>(DependencyFetchTarget.GlobalInstance);
         private HubConnection _connection;
+        
 
         public async Task Connect()
         {
@@ -47,14 +50,14 @@ namespace MobTracker.Client.Services
 
             await _connection.StartAsync();
             await _connection.InvokeAsync("AddToGroup", ApplicationConfig.ApplicationType);
+            await _connection.InvokeAsync("DeviceIntroduction", _deviceInfoService.DeviceBadge);
         }
 
         private void InitializeDeviceApi()
         {
             _connection.On("IntroduceYourself", async () =>
             {
-                var deviceInfo = new DeviceInfo { Id = "ewqcqecqe", Brand = "Samsung", Model = "Galaxy" };
-                await _connection.InvokeAsync("DeviceIntroduction", deviceInfo);
+                await _connection.InvokeAsync("DeviceIntroduction", _deviceInfoService.DeviceBadge);
             });
 
             /*_connection.On<string, string>("IntroduceYourself2", (user, message) =>

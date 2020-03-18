@@ -19,7 +19,7 @@ export default function DeviceBadge({ device }) {
               <small>{device.connectionId}</small>
             </p>
             <p>
-              <small>{device.brand}</small>
+              <small>{device.manufacturer}</small>
             </p>
             <span className="badge badge-info badge-pill">{device.model}</span>
           </div>
