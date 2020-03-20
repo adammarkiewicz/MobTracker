@@ -6,6 +6,7 @@ import MapGL, {
   FullscreenControl
 } from "react-map-gl";
 import DevicePin from "components/Map/DevicePin";
+import "components/Map/Map.css";
 
 export default function Map({ viewport, setViewport, locationMarkers }) {
   const config = {
@@ -33,8 +34,13 @@ export default function Map({ viewport, setViewport, locationMarkers }) {
       onViewportChange={setViewport}
     >
       {locationMarkers.map(marker => renderDeviceMarker(marker))}
-      <FullscreenControl />
-      <NavigationControl />
+
+      <div className="FullscreenControl">
+        <FullscreenControl />
+      </div>
+      <div className="NavigationControl">
+        <NavigationControl />
+      </div>
     </MapGL>
   );
 }
