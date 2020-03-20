@@ -29,7 +29,8 @@ export function ApiProvider(props) {
       .build();
 
     await conn.start();
-    await conn.invoke("AddToGroup", config.appType);
+
+    conn.invoke("AddToGroup", config.appType);
 
     setConnection(conn);
     setIsLoading(false);
@@ -46,7 +47,11 @@ export function ApiProvider(props) {
     isLoading,
     connection,
     trigerDevicesIntroduction: () =>
-      connection.invoke("TrigerDevicesIntroduction")
+      connection.invoke("TrigerDevicesIntroduction"),
+    startTrackingAllDevices: () => connection.invoke("StartTrackingAllDevices"),
+    stopTrackingAllDevices: () => connection.invoke("StopTrackingAllDevices"),
+    onNewDevice: (...p) => connection.on("NewDevice", ...p),
+    offNewDevice: () => connection.off("NewDevice")
   };
   const { children } = props;
   return <ApiContext.Provider value={api}>{children}</ApiContext.Provider>;

@@ -17,7 +17,22 @@ namespace MobTracker.Client.Droid.Services
         {
             DeviceBadge.Id = Settings.Secure.GetString(Android.App.Application.Context.ContentResolver, Settings.Secure.AndroidId);
             DeviceBadge.Manufacturer = DeviceInfo.Manufacturer;
-            DeviceBadge.Model = DeviceInfo.Model;   
-        }        
+            DeviceBadge.Model = DeviceInfo.Model;
+            DeviceBadge.Colour = ComputeColor(DeviceBadge.Id);
+        }
+
+        private string ComputeColor(string deviceId)
+        {
+            var hash = deviceId.GetHashCode();
+
+            var colour = "#";
+            for (var i = 0; i < 3; i++)
+            {
+                var value = hash >> (i * 8) & 0xFF;
+                colour += value.ToString("X2");
+            }
+
+            return colour;
+        }
     }
 }

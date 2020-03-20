@@ -19,11 +19,6 @@
                 VerticalOptions="CenterAndExpand"
                 HorizontalOptions="Center"
                 Clicked="OnConnectButtonClicked" />
-        <Button x:Name="sendButton"
-                Text="Send"
-                VerticalOptions="CenterAndExpand"
-                HorizontalOptions="Center"
-                Clicked="OnSendButtonClicked" />
         <Button x:Name="TestHttpsButton"
                 Text="Test http get"
                 VerticalOptions="CenterAndExpand"

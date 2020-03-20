@@ -1,6 +1,7 @@
 import React from "react";
 import { Row, Col, ListGroup } from "react-bootstrap";
 import phone from "assets/phone.svg";
+import "components/DeviceBadge/DeviceBadge.css";
 
 export default function DeviceBadge({ device }) {
   return (
@@ -15,13 +16,18 @@ export default function DeviceBadge({ device }) {
           </div>
           <div className="flex-column">
             {device.id}
-            <p>
+            <div>
               <small>{device.connectionId}</small>
-            </p>
-            <p>
+            </div>
+            <div>
               <small>{device.manufacturer}</small>
-            </p>
-            <span className="badge badge-info badge-pill">{device.model}</span>
+            </div>
+            <span
+              style={{ backgroundColor: device.colour }}
+              className="badge badge-info badge-pill"
+            >
+              {device.model}
+            </span>
           </div>
         </ListGroup.Item>
       </Col>

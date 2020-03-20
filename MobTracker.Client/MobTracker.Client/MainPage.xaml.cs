@@ -21,7 +21,7 @@ namespace MobTracker.Client
         private HttpClientHandler _httpClientHandler;
         private HttpClient _httpClient;
         private ApiService _apiService;
-        
+
 
         public MainPage()
         {
@@ -70,19 +70,7 @@ namespace MobTracker.Client
             }
             finally
             {
-                connectButton.IsEnabled = true;
-            }
-        }
-
-        private async void OnSendButtonClicked(object sender, EventArgs args)
-        {
-            try
-            {
-                //await _connection.InvokeAsync("ReceiveLocationFromTracker", "47.275175, 8.448372");
-            }
-            catch (Exception ex)
-            {
-                Debugger.Log(1, "all", ex.Message);
+                label.Text = "Connected";
             }
         }
 

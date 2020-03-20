@@ -29,7 +29,7 @@ namespace MobTracker.SignalrApi.Hubs
             await Clients.Group(mobileGroupName).SendAsync("IntroduceYourself");
         }
 
-        public async Task DeviceIntroduction(Device device)
+        public async Task IntroduceMe(Device device)
         {
             var userId = Context.User.FindFirst(ClaimTypes.NameIdentifier).Value;
             var adminUIGroupName = string.Concat(userId, ApplicationTypes.AdminUI);
@@ -37,6 +37,30 @@ namespace MobTracker.SignalrApi.Hubs
             device.ConnectionId = Context.ConnectionId;
 
             await Clients.Group(adminUIGroupName).SendAsync("NewDevice", device);
+        }
+
+        public async Task SendLocationMarker(LocationMarker locationMarker)
+        {
+            var userId = Context.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var adminUIGroupName = string.Concat(userId, ApplicationTypes.AdminUI);
+
+            await Clients.Group(adminUIGroupName).SendAsync("NewLocationMarker", locationMarker);
+        }
+
+        public async Task StartTrackingAllDevices()
+        {
+            var userId = Context.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var mobileGroupName = string.Concat(userId, ApplicationTypes.Mobile);
+
+            await Clients.Group(mobileGroupName).SendAsync("StartTracking");
+        }
+
+        public async Task StopTrackingAllDevices()
+        {
+            var userId = Context.User.FindFirst(ClaimTypes.NameIdentifier).Value;
+            var mobileGroupName = string.Concat(userId, ApplicationTypes.Mobile);
+
+            await Clients.Group(mobileGroupName).SendAsync("StopTracking");
         }
 
         public override async Task OnDisconnectedAsync(Exception exception)
