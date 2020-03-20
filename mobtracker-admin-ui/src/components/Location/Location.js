@@ -29,6 +29,12 @@ export default function Location() {
     { deviceId: 1, colour: "blue", latitude: 12.345, longitude: 12.345 }
   ]);
 
+  const [viewport, setViewport] = useState({
+    latitude: 12.345,
+    longitude: 12.345,
+    zoom: 8
+  });
+
   useEffect(() => {
     if (!isLoading) {
       onNewDevice(device => {
@@ -71,13 +77,29 @@ export default function Location() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isLoading]);
 
+  const centerOnClickedDeviceBadge = deviceId => {
+    const marker = locationMarkers.find(marker => marker.deviceId === deviceId);
+    setViewport(viewport => ({
+      latitude: marker.latitude,
+      longitude: marker.longitude,
+      zoom: viewport.zoom
+    }));
+  };
+
   return (
     <Row noGutters className="h-100">
       <Col xs={3}>
-        <DeviceList list={deviceList} />
+        <DeviceList
+          list={deviceList}
+          onBadgeClick={centerOnClickedDeviceBadge}
+        />
       </Col>
       <Col xs={9}>
-        <Map locationMarkers={locationMarkers}></Map>
+        <Map
+          viewport={viewport}
+          setViewport={setViewport}
+          locationMarkers={locationMarkers}
+        ></Map>
       </Col>
     </Row>
   );

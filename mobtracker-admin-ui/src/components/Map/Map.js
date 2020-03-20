@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import MapGL, {
   Marker,
   Popup,
@@ -7,13 +7,7 @@ import MapGL, {
 } from "react-map-gl";
 import DevicePin from "components/Map/DevicePin";
 
-export default function Map({ locationMarkers }) {
-  const [viewport, setViewport] = useState({
-    latitude: 12.345,
-    longitude: 12.345,
-    zoom: 8
-  });
-
+export default function Map({ viewport, setViewport, locationMarkers }) {
   const config = {
     accessToken: process.env.REACT_APP_MAPBOX_TOKEN
   };
@@ -25,7 +19,7 @@ export default function Map({ locationMarkers }) {
         longitude={locationMarker.longitude}
         latitude={locationMarker.latitude}
       >
-        <DevicePin size={20} color={locationMarker.colour} />
+        <DevicePin size={30} color={locationMarker.colour} />
       </Marker>
     );
   };
