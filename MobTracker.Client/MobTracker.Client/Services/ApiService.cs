@@ -35,7 +35,7 @@ namespace MobTracker.Client.Services
         {
             if (_authenticationService.IsAuthenticated == false)
             {
-                await _authenticationService.Authenticate();
+                throw new Exception("Must be authenticated before connecting.");
             }
 
             _connection = new HubConnectionBuilder()
