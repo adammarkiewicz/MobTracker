@@ -1,0 +1,1 @@
+**MobTracker** is a simple system that allows users to track multiple mobile devices in real time. It consists of admin ui (react web app), mobile app installed on devices and backend service which provides communication api (SignalR). Both apps and api are secured using Auth0.
